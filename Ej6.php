@@ -19,3 +19,5 @@ if (isset($_GET["edad"])) {
 } else {
     echo "Pon tu edad en la url";
 }
+
+?>
