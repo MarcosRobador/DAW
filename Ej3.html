@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Introduzca sus datos, gracias.</h1>
+    
+    <!-- action: donde se enviaran los datos -->
+    <!-- method="POST": metodo para enviar los datos de forma privada -->
+    <form action="Ej3.php" method="POST">
+        
+        <label for="nombre">Nombre:</label>
+       
+        <!-- required: obliga a completar el campo -->
+        <input type="text" name="nombre" required><br>
+        
+        <label for="apellido1">Primer apellido:</label>
+        <input type="text" name="apellido1" required><br>
+        
+        <label for="apellido2">Segundo apellido:</label>
+        <input type="text" name="apellido2" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+        
+        <label for="nacimiento">Año de nacimiento:</label>
+        <input type="number" name="nacimiento" required><br>
+        
+        <label for="movil">Movil:</label>
+        <input type="text" name="movil" required><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
