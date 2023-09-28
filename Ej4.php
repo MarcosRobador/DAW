@@ -1,9 +1,9 @@
 <?php
 
 // Verifica si la edad esta en la URL
-if (isset($_GET['edad'])) {
+if (isset($_GET["edad"])) {
     // Obtiene la edad de la URL y la convierte en un entero
-    $edad = (int)$_GET['edad'];
+    $edad = (int)$_GET["edad"];
 
 $anyoActual = date("Y");
 
