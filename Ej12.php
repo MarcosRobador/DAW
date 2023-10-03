@@ -6,13 +6,14 @@ if (isset($_GET["filas"]) && isset($_GET["columnas"])) {
 
     echo "<table border='5'>";
 
-    // Itera sobre las filas
+    // El tamaño de la tabla dependera del numero de filas y columnas 
     for ($fila = 1; $fila <= $numFilas; $fila++) {
         echo "<tr>";
 
-        // Itera sobre las columnas
+        // Columnas
         for ($columna = 1; $columna <= $numColumnas; $columna++) {
-            // Calcula el valor de la celda como las coordenadas (fila, columna)
+            
+            // Muestra las filas y columnas en el interior de la celda
             $valor = $fila . ", " . $columna;
 
             // Crea la celda y muestra el valor
@@ -20,10 +21,10 @@ if (isset($_GET["filas"]) && isset($_GET["columnas"])) {
         }
 
         echo "</tr>";
-    }
+    }   
 
-    // Cierra la tabla
     echo "</table>";
+    
 } else {
     echo "Establece el numero de filas y columnas en la URL";
 }
