@@ -5,20 +5,20 @@ if (isset($_GET["edad"])) {
 // Obtiene la edad de la URL y la convierte en un entero
 $edad = (int)$_GET["edad"];
 
-$anyoActual = date("Y");
+$añoActual = date("Y");
 
 $edadEn10 = $edad + 10;
 $edadHace10 = $edad - 10;
 
-$anyoEn10 = $anyoActual + 10;
-$anyoHace10 = $anyoActual - 10;
+$añoEn10 = $añoActual + 10;
+$añoHace10 = $añoActual - 10;
 
-$anyoJubilacion = $anyoActual + (67 - $edad);
+$añoJubilacion = $añoActual + (67 - $edad);
 
 echo "Edad actual: $edad años <p>";
-echo "Edad dentro de 10 años: $edadEn10  // Será el año: $anyoEn10 <p>";
-echo "Edad hace de 10 años: $edadHace10  // Será el año: $anyoHace10 <p>";
-echo "Si te jubilas a los 67 años, será el año: $anyoJubilacion ";
+echo "Edad dentro de 10 años: $edadEn10  // Será el año: $añoEn10 <p>";
+echo "Edad hace de 10 años: $edadHace10  // Será el año: $añoHace10 <p>";
+echo "Si te jubilas a los 67 años, será el año: $añoJubilacion ";
 
 } else {
     // Si la edad no se ha puesto en la url
