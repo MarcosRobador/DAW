@@ -1,5 +1,6 @@
 <?php
 
+    // array con las respuestas
     $respuestas = [
         "Sí",
         "No",
@@ -14,6 +15,8 @@
 
     if (isset($_POST["pregunta"])) {
         $pregunta = $_POST["pregunta"];
+
+        // elige una respuesta aleatoria con array_rand y la almacena en $respuesta
         $respuesta = $respuestas[array_rand($respuestas)]; 
         echo "<p><strong>Tu pregunta:</strong> $pregunta</p>";
         echo "<p><strong>Respuesta:</strong> $respuesta</p>";
