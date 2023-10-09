@@ -7,7 +7,7 @@ class  Empleado{
         protected string $nombre,
         protected string $apellidos,
         protected float $sueldo,
-        private array $numeroTelefono
+        private array $telefonos
     ){}
 
     public function getNombre() {
@@ -42,16 +42,41 @@ class  Empleado{
         return $this-> $sueldo > 3333;
     }
 
-    public function anyadirTelefono(int $telefono): void{
+    public function getTelefonos() {
+        return $this->telefonos;
+    }
 
+    public function setTelefonos(array $telefonos) {
+        $this->telefonos = $telefonos;
+    }
+
+    public function anyadirTelefono(int $telefono): void {
+        $this->telefonos[] = $telefono;
+    }
+
+    // implode: une los numeros del array en una cadena, separada por comas y espacios
+    public function listarTelefonos(): string {
+        return implode(', ', $this->telefonos);
+    }
+
+    // Establece el array como vacio, de manera que cuando se llame al metodo, sirva para eliminar los telefonos
+    public function vaciarTelefonos(): void {
+        $this->telefonos = array();
     }
 }
  
-$empleado = new Empleado("Marcos", "Robador", 1200);
+$empleado = new Empleado("Marcos", "Robador", 1200, array(620196852, 123456789));
+$empleado-> anyadirTelefono (111111111);
 
 echo "<p> Nombre completo: " . $empleado-> getNombreCompleto() . "</p>";
 // ? "Si" : "No": condicional que se utiliza para saber si se cumple la condicion dentro 
 // del metodo debePagarImpuesto(), si es true devuelve Si y si es false No
-echo "Debe pagar impuestos: " . ($empleado-> debePagarImpuesto() ? "Si" : "No") . "\n";
+echo "<p> Debe pagar impuestos: " . ($empleado-> debePagarImpuesto() ? "Si" : "No" . "</p>") . "\n";
+echo "Telefonos: " . $empleado->listarTelefonos() . "</p>";
+
+$empleado->vaciarTelefonos();
+
+echo "Telefonos actualizados: " . $empleado->listarTelefonos();
+
 
 ?>
