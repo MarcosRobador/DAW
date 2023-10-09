@@ -38,16 +38,16 @@ class  Empleado{
         return $this-> nombre ." ". $this-> apellidos;
     }
 
-    public function debePagarImpuesto(): bool{
-        return $this-> $sueldo > 3333;
-    }
-
     public function getTelefonos() {
         return $this->telefonos;
     }
 
     public function setTelefonos(array $telefonos) {
         $this->telefonos = $telefonos;
+    }
+    
+    public function debePagarImpuesto(): bool{
+        return $this-> $sueldo > 3333;
     }
 
     public function anyadirTelefono(int $telefono): void {
