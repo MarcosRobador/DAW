@@ -7,7 +7,7 @@ class  Empleado{
         protected string $nombre,
         protected string $apellidos,
         protected float $sueldo,
-        private array $telefonos
+        private array $telefonos 
     ){}
 
     public function getNombre() {
@@ -34,10 +34,6 @@ class  Empleado{
         return $this->sueldo = $sueldo;
     }
 
-    public function getNombreCompleto(): string{
-        return $this-> nombre ." ". $this-> apellidos;
-    }
-
     public function getTelefonos() {
         return $this->telefonos;
     }
@@ -45,7 +41,11 @@ class  Empleado{
     public function setTelefonos(array $telefonos) {
         $this->telefonos = $telefonos;
     }
-    
+
+    public function getNombreCompleto(): string{
+        return $this-> nombre ." ". $this-> apellidos;
+    }
+
     public function debePagarImpuesto(): bool{
         return $this-> $sueldo > 3333;
     }
