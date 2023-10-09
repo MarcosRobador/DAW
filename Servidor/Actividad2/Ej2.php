@@ -7,7 +7,7 @@ class  Empleado{
         protected string $nombre,
         protected string $apellidos,
         protected float $sueldo,
-        private array $telefonos 
+        private array $telefonos = []
     ){}
 
     public function getNombre() {
