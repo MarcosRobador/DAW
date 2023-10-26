@@ -8,11 +8,11 @@ let ladder = {
     },
     down() {
       this.step--;
-      return this; // Devuelve 'this' para permitir llamadas encadenadas
+      return this;
     },
     showStep() {
       alert(this.step);
-      return this; // Devuelve 'this' para permitir llamadas encadenadas
+      return this;
     }
   };
   
