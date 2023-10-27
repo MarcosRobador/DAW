@@ -2,7 +2,7 @@
 $host = 'localHost'; // Cambia esto al nombre del servidor de tu base de datos
 $usuario = 'root'; // Cambia esto a tu nombre de usuario de la base de datos
 $contrasena = ''; // Cambia esto a tu contraseña de la base de datos
-$base_datos = 'Profesores'; // Cambia esto al nombre de tu base de datos
+$base_datos = 'base'; // Cambia esto al nombre de tu base de datos
 
 // Intenta conectar a la base de datos
 $conexion = new mysqli($host, $usuario, $contrasena, $base_datos);
@@ -14,7 +14,7 @@ if ($conexion->connect_error) {
 echo "Conexión exitosa"; // Esto se imprimirá si la conexión fue exitosa
 
 // Consulta SQL para obtener al alumno más joven
-$sql = "SELECT * FROM persona WHERE tipo = 'alumno' ORDER BY fecha_nacimiento ASC LIMIT 1";
+/*$sql = "SELECT * FROM persona WHERE tipo = 'alumno' ORDER BY fecha_nacimiento ASC LIMIT 1";
 
 $resultado = $conexion->query($sql);
 
@@ -78,7 +78,7 @@ if ($resultado2) {
 } else {
     echo "Error en la consulta: " . $conexion->error;
 }
-
+*/
 $conexion->close();
 ?>
 
