@@ -1,0 +1,36 @@
+/* Estilo del encabezado */
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto */
+    padding: 20px 0; /* Espaciado interior superior e inferior */
+    display: flex; /* Hace que los elementos internos se comporten como flex-items */
+    justify-content: space-between; /* Distribuye los elementos internos a lo largo del contenedor */
+    align-items: center; /* Centra verticalmente los elementos internos */
+}
+
+/* Estilo del logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo de la barra de navegación */
+nav ul {
+    list-style: none; /* Elimina las viñetas de la lista */
+    padding: 0; /* Elimina el espaciado interior de la lista */
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos de la lista en línea */
+    margin-right: 20px; /* Espaciado entre elementos de la lista */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Elimina el espaciado después del último elemento de la lista */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #fff; /* Color del texto de los enlaces */
+    font-weight: bold;
+}
