@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Mi Sitio Web</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">Mi Logo</div>
+        <div class="logo">
+            <img src="img/LogoBarco.png" alt="Mi Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
@@ -18,6 +20,8 @@
             </ul>
         </nav>
     </header>
-
+    <footer>
+        <p>&copy; 2023 Mi Sitio Web - Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

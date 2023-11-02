@@ -1,18 +1,27 @@
 /* Estilo del encabezado */
 header {
-    background-color: #333; /* Color de fondo del encabezado */
-    color: #fff; /* Color de texto */
-    padding: 20px 0; /* Espaciado interior superior e inferior */
+    background-color: #3b3b3b; /* Color de fondo del encabezado */
+    color: #ffffff; /* Color del texto en el encabezado */
+    padding: 20px; /* Espaciado interior */
     display: flex; /* Hace que los elementos internos se comporten como flex-items */
     justify-content: space-between; /* Distribuye los elementos internos a lo largo del contenedor */
     align-items: center; /* Centra verticalmente los elementos internos */
 }
 
 /* Estilo del logo */
+/* Estilo del logo */
 .logo {
-    font-size: 24px;
+    font-size: 18px; /* Tamaño de fuente más pequeño para el logo */
     font-weight: bold;
 }
+
+/* Estilo del logo */
+.logo img {
+    width: 50px; /* Ancho deseado */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+
 
 /* Estilo de la barra de navegación */
 nav ul {
@@ -31,6 +40,13 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #fff; /* Color del texto de los enlaces */
+    color: #ffffff; /* Color del texto de los enlaces en el encabezado */
     font-weight: bold;
+}
+/* Estilo del footer */
+footer {
+    background-color: #333; /* Color de fondo del pie de página */
+    color: #fff; /* Color del texto en el pie de página */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 10px; /* Espaciado interior */
 }
