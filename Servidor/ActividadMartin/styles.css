@@ -1,37 +1,35 @@
 /* Estilo del encabezado */
 header {
-    background-color: #3b3b3b; /* Color de fondo del encabezado */
-    color: #ffffff; /* Color del texto en el encabezado */
-    padding: 20px; /* Espaciado interior */
-    display: flex; /* Hace que los elementos internos se comporten como flex-items */
-    justify-content: space-between; /* Distribuye los elementos internos a lo largo del contenedor */
-    align-items: center; /* Centra verticalmente los elementos internos */
+    background-color: #3b3b3b;
+    color: #ffffff; 
+    padding: 20px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 /* Estilo del logo */
-/* Estilo del logo */
 .logo {
-    font-size: 18px; /* Tamaño de fuente más pequeño para el logo */
+    font-size: 18px; 
     font-weight: bold;
 }
 
-/* Estilo del logo */
 .logo img {
-    width: 50px; /* Ancho deseado */
-    height: auto; /* Altura automática para mantener la proporción */
+    width: 50px;
+    height: auto; 
 }
 
 
 
 /* Estilo de la barra de navegación */
 nav ul {
-    list-style: none; /* Elimina las viñetas de la lista */
-    padding: 0; /* Elimina el espaciado interior de la lista */
+    list-style: none;
+    padding: 0; 
 }
 
 nav ul li {
-    display: inline; /* Muestra los elementos de la lista en línea */
-    margin-right: 20px; /* Espaciado entre elementos de la lista */
+    display: inline; 
+    margin-right: 20px; 
 }
 
 nav ul li:last-child {
@@ -43,10 +41,4 @@ nav ul li a {
     color: #ffffff; /* Color del texto de los enlaces en el encabezado */
     font-weight: bold;
 }
-/* Estilo del footer */
-footer {
-    background-color: #333; /* Color de fondo del pie de página */
-    color: #fff; /* Color del texto en el pie de página */
-    text-align: center; /* Alineación del texto al centro */
-    padding: 10px; /* Espaciado interior */
-}
+
