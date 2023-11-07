@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost'; 
+$host = 'localHost'; 
 $usuario = 'root';
 $contrasena = '';
 $base_datos = 'banco';
