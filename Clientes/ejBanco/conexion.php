@@ -12,9 +12,7 @@ if ($conexion->connect_error) {
     die('Error de conexión a la base de datos: ' . $conexion->connect_error);
 } else {
     echo 'Conexión exitosa a la base de datos.';
-    // Aquí puedes realizar operaciones en la base de datos
 }
 
-// Recuerda cerrar la conexión cuando hayas terminado de usarla
 $conexion->close();
 ?>
