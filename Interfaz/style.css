@@ -22,10 +22,10 @@ header, footer {
 img {
     width: 100%;
     max-width: 200px;
-    transition: transform 0.2s; /* Animation for the transformation */
+    transition: transform 0.2s; 
 }
 img:hover {
-    transform: scale(1.1); /* Slightly enlarges the image when hovered */
+    transform: scale(1.1); 
 }
 .footer {
     position: fixed;
