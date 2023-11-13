@@ -1,0 +1,33 @@
+body {
+    padding-top: 50px;
+  }
+  .perfil-imagen {
+    width: 150px;
+    height: 150px;
+    background-color: #eaeaea;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .nombre {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .boton-contacto {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+  }
+  .habilidades, .informacion-personal {
+    margin-bottom: 30px;
+  }
+  .proyecto {
+    background-color: #eaeaea;
+    height: 200px;
+  }
+  .seccion-contacto {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+  }
+  
