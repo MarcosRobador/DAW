@@ -31,7 +31,23 @@ body {
     padding: 20px 0;
   }
   .margen {
-    margin-bottom: 100px; 
+    margin-bottom: 100px; /* Ajusta este valor según tus necesidades */
 }
+  .mapa-responsivo {
+    width: 135%;
+    height: 350px; 
+    border: 0;
+  }
+  @media screen and (max-width: 768px) {
+    .mapa-responsivo {
+      height: 250px; 
+      width: 100%;
+    }
+    h2{
+      margin-top: 20%;
+    }
+  }
+  
+
 
   
