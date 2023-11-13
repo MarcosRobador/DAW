@@ -31,7 +31,7 @@ body {
     padding: 20px 0;
   }
   .margen {
-    margin-bottom: 100px; /* Ajusta este valor según tus necesidades */
+    margin-bottom: 100px; 
 }
   .mapa-responsivo {
     width: 135%;
@@ -47,7 +47,13 @@ body {
       margin-top: 20%;
     }
   }
+  body.dark-mode {
+    background-color: #121212; 
+    color: #ffffff; 
+  }
+  body.dark-mode .seccion-contacto {
+    background-color: #1a1a1a; 
+}
   
-
-
+  
   
