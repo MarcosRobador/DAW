@@ -1,7 +1,7 @@
 <?php
-$host = 'localHost'; 
+$host = 'localhost'; 
 $usuario = 'root';
-$contrasena = '';
+$contrasena = 'root';
 $base_datos = 'banco';
 
 // Intenta conectar a la base de datos
@@ -13,6 +13,7 @@ if ($conexion->connect_error) {
 } else {
     echo 'Conexión exitosa a la base de datos.';
 }
+
 
 $conexion->close();
 ?>
