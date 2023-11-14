@@ -8,18 +8,38 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <body>
-  <div class="container margen"> 
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <img src="img/LogoPortfolio-removebg-preview.png" alt="Logo" width="60" height="40">
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="img/LogoPortfolio-removebg-preview.png" width="50" height="30" alt="Logo">
+        </a>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Sobre mi</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Proyectos</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-      </ul>
-    </header>
-  </div>
-  
+        <!-- Botón para dispositivos móviles -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Elementos del navbar -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link te" href="#sobre-mi">Sobre mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#proyectos">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+
   <button id="toggleTheme" class="btn">
     <img id="themeIcon" src="img/luna.png" alt="Modo Oscuro">
   </button>

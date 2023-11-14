@@ -9,3 +9,4 @@ document.getElementById('toggleTheme').addEventListener('click', function() {
         themeIcon.alt = 'Modo Oscuro';
     }
 });
+
