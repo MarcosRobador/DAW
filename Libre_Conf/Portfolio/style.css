@@ -54,6 +54,11 @@ body {
   body.dark-mode .seccion-contacto {
     background-color: #1a1a1a; 
 }
-  
-  
-  
+#toggleTheme {
+  padding: 5px 10px; 
+  font-size: 12px; 
+  position: fixed; 
+  top: 670px;
+  right: 10px;
+  z-index: 1000; 
+}
