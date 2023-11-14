@@ -8,35 +8,17 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <body>
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-            <img src="img/LogoPortfolio-removebg-preview.png" width="50" height="30" alt="Logo">
-        </a>
+  <div class="container margen"> 
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <img src="img/LogoPortfolio-removebg-preview.png" alt="Logo" width="60" height="40">
 
-        <!-- Botón para dispositivos móviles -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Elementos del navbar -->
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link te" href="#sobre-mi">Sobre mí</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#proyectos">Proyectos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#sobre-mi" class="nav-link active" aria-current="page">Sobre mi</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Proyectos</a></li>
+        <li class="nav-item"><a href="#contactame" class="nav-link">Contacto</a></li>
+      </ul>
+    </header>
+  </div>
 
 
 
@@ -52,7 +34,7 @@
 </div>
 
 <!-- Información Personal y Habilidades -->
-<div class="container informacion-personal margen">
+<div id="sobre-mi" class="container informacion-personal margen">
   <div class="row">
     <div class="col-md-4">
       <img src="img/imagen.png" alt="imagen" class="img-fluid mx-auto d-block d-md-inline" height="250" width="250">
@@ -141,6 +123,21 @@
   </div>
 </div>
 
+<div class="container-footer">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">© 2023 Marcos Robador Mateos</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+    </ul>
+  </footer>
 </div>
 
 <script src="script.js"></script>
