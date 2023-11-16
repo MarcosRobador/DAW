@@ -85,5 +85,6 @@
 body {
   font-family: monospace;
 }
-
-
+.espacio-icono{
+  margin-right: 20px;
+}
