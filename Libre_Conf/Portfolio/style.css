@@ -5,12 +5,6 @@
     border-radius: 50%;
     margin: 0 auto;
   }
-  .nombre {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-  }
   .boton-contacto {
     display: block;
     width: 200px;
@@ -28,7 +22,7 @@
     padding: 20px 0;
   }
   .margen {
-    margin-bottom: 100px; 
+    margin-bottom: 238px; 
 }
   .mapa-responsivo {
     width: 135%;
@@ -64,4 +58,32 @@
   width: 50px; 
   height: auto; 
 }
+/* Define una animación llamada 'typing' */
+@keyframes typing {
+  from { width: 0 } /* Inicia con el ancho en 0, escondiendo el texto */
+  to { width: 100% } /* Termina con el ancho completo, mostrando todo el texto */
+}
+
+/* Define una animación llamada 'blink' para el efecto del cursor */
+@keyframes blink {
+  50% { border-color: transparent } /* Efecto parpadeo */
+}
+.nombre {
+  font-family: monospace; 
+  font-weight: bold; 
+  font-size: 2em; 
+  overflow: hidden; /* Oculta el texto que excede el tamaño del elemento */
+  border-right: .15em solid orange; 
+  white-space: nowrap; /* Evita que el texto se ajuste a la línea siguiente */
+  margin: 20px 0; 
+  letter-spacing: .15em; 
+  text-align: center; 
+  animation: 
+    typing 3.5s steps(30, end), /* Aplica la animación 'typing' durante 3.5 segundos con 30 pasos */
+    blink .75s step-end infinite; /* Aplica la animación 'blink' que dura .75 segundos y se repite infinitamente */
+}
+body {
+  font-family: monospace;
+}
+
 
