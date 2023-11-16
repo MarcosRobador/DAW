@@ -10,3 +10,25 @@ document.getElementById('toggleTheme').addEventListener('click', function() {
     }
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    let observerOptions = {
+      threshold: 0.5 
+    };
+  
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          let progressBar = entry.target;
+          let targetWidth = progressBar.id === 'progress-bar-1' ? '50%' : '75%'; 
+          progressBar.style.width = targetWidth;
+          observer.unobserve(progressBar); 
+        }
+      });
+    }, observerOptions);
+  
+    observer.observe(document.getElementById('progress-bar-1'));
+    observer.observe(document.getElementById('progress-bar-2'));
+  });
+  
+
