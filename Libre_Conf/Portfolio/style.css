@@ -90,10 +90,11 @@ body {
 }
 
 .progress-container {
-  width: 100%;
+  width: 50%;
   background: #e0e0e0;
   border-radius: 20px;
-  margin: 50px 0; /* Adjust as needed for layout */
+  margin: 50px auto; 
+  
 }
 
 .progress-bar {
