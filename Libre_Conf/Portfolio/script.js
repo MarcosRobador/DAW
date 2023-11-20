@@ -12,23 +12,40 @@ document.getElementById('toggleTheme').addEventListener('click', function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    let observerOptions = {
-      threshold: 0.5 
-    };
-  
-    let observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          let progressBar = entry.target;
-          let targetWidth = progressBar.id === 'progress-bar-1' ? '50%' : '75%'; 
-          progressBar.style.width = targetWidth;
-          observer.unobserve(progressBar); 
+  let observerOptions = {
+    threshold: 0.5 
+  };
+
+  let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        let progressBar = entry.target;
+        let targetWidth;
+        switch(progressBar.id) {
+            case 'progress-bar-1':
+                targetWidth = '75%';
+                break;
+            case 'progress-bar-2':
+                targetWidth = '80%';
+                break;
+            case 'progress-bar-3':
+                targetWidth = '74%'; 
+                break;
+            case 'progress-bar-4':
+                targetWidth = '72%'; 
+                break;
         }
-      });
-    }, observerOptions);
-  
-    observer.observe(document.getElementById('progress-bar-1'));
-    observer.observe(document.getElementById('progress-bar-2'));
-  });
+        progressBar.style.width = targetWidth;
+        observer.unobserve(progressBar); 
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(document.getElementById('progress-bar-1'));
+  observer.observe(document.getElementById('progress-bar-2'));
+  observer.observe(document.getElementById('progress-bar-3'));
+  observer.observe(document.getElementById('progress-bar-4'));
+});
+
   
 

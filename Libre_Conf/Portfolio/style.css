@@ -1,59 +1,70 @@
-  #skills-header {
-    margin-left: 200px;
-    margin-bottom: 4%; 
-  }
-  .perfil-imagen {
-    width: 150px;
-    height: 150px;
-    background-color: #eaeaea;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
-  .boton-contacto {
-    display: block;
-    width: 200px;
-    margin: 10px auto;
-  }
-  .habilidades, .informacion-personal {
-    margin-bottom: 30px;
-  }
-  .proyecto {
-    background-color: #eaeaea;
-    height: 200px;
-  }
-  .seccion-contacto {
-    background-color: #f9f9f9;
-    padding: 20px 0;
-  }
-  .margen {
-    margin-bottom: 238px; 
+body {
+  font-family: monospace;
+} 
+
+.perfil-imagen {
+  width: 150px;
+  height: 150px;
+  background-color: #eaeaea;
+  border-radius: 50%;
+  margin: 0 auto;
 }
+
+.boton-contacto {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+}
+
+.habilidades, .informacion-personal {
+  margin-bottom: 30px;
+}
+
+.proyecto {
+  background-color: #eaeaea;
+  height: 200px;
+}
+
+.seccion-contacto {
+  background-color: #f9f9f9;
+  padding: 20px 0;
+}
+
+.margen {
+  margin-bottom: 238px; 
+}
+
+.mapa-responsivo {
+  width: 135%;
+  height: 350px; 
+  border: 0;
+}
+
+@media screen and (max-width: 768px) {
   .mapa-responsivo {
-    width: 135%;
-    height: 350px; 
-    border: 0;
+    height: 250px; 
+    width: 100%;
   }
-  @media screen and (max-width: 768px) {
-    .mapa-responsivo {
-      height: 250px; 
-      width: 100%;
-    }
-    h2{
-      margin-top: 20%;
-    }
+  h2{
+    margin-top: 20%;
   }
-  body.dark-mode {
-    background-color: #121212; 
-    color: #ffffff; 
-  }
-  .dark-mode .card {
-    background-color: #333; 
-    color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgb(255, 255, 255);
-  }
-  body.dark-mode .seccion-contacto {
-    background-color: #1a1a1a; 
 }
+
+body.dark-mode {
+  background-color: #121212; 
+  color: #ffffff; 
+}
+
+.dark-mode .card {
+  background-color: #333; 
+  color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgb(255, 255, 255);
+}
+
+body.dark-mode .seccion-contacto {
+  background-color: #1a1a1a; 
+}
+
 #toggleTheme {
   padding: 5px 10px; 
   font-size: 12px; 
@@ -62,11 +73,13 @@
   right: 10px; 
   z-index: 1000; 
 }
+
 /*tamaño imagen modo oscuro*/
 #themeIcon {
   width: 50px; 
   height: auto; 
 }
+
 /* Define una animación llamada 'typing' */
 @keyframes typing {
   from { width: 0 } /* Inicia con el ancho en 0, escondiendo el texto */
@@ -77,6 +90,7 @@
 @keyframes blink {
   50% { border-color: transparent } /* Efecto parpadeo */
 }
+
 .nombre {
   font-family: monospace; 
   font-weight: bold; 
@@ -91,9 +105,11 @@
     typing 3.5s steps(30, end), /* Aplica la animación 'typing' durante 3.5 segundos con 30 pasos */
     blink .75s step-end infinite; /* Aplica la animación 'blink' que dura .75 segundos y se repite infinitamente */
 }
+
 body {
   font-family: monospace;
 }
+
 .espacio-icono{
   margin-right: 20px;
 }
@@ -149,11 +165,18 @@ body {
   padding: 15px;
   text-align: center;
 }
+
 #card9 {
   display: flex;
   justify-content: center; 
 }
+
 #card10{
   display: flex;
   justify-content: center;
+}
+
+#skills-header {
+  margin-left: 200px;
+  margin-bottom: 4%; 
 }
