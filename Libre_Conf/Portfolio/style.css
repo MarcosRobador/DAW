@@ -57,10 +57,11 @@ body {
 .seccion-contacto {
   background-color: #f9f9f9;
   padding: 20px 0;
+  margin-top: 238px;
 }
 
 .margen {
-  margin-bottom: 238px; 
+  margin-top: 238px; 
 }
 
 .mapa-responsivo {
@@ -95,7 +96,7 @@ body.dark-mode {
 }
 
 body.dark-mode .seccion-contacto {
-  background-color: #1a1a1a; 
+  background-color: #333; 
 }
 
 .dark-mode .nav-link {
@@ -216,27 +217,54 @@ body {
 #skills-header {
   margin-left: 200px;
   margin-bottom: 4%; 
+  margin-top: 238px;
 }
 
-#proyectos-header {
+#proyectos-header{
   margin-left: 200px;
   margin-bottom: 4%; 
+  margin-top: 238px;
 }
 
-.img-proyecto{
-  width: 600px;
-  height: 400px;
-  margin-left: 10%;
+.full-height {
+  width: 100vh;
 }
 
-.container-proyectos {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 150px;
+#container1{
+  background-color: #f9f9f9;
+}
+
+.dark-mode #container1{
+  background-color: #161616;
+}
+
+.img-proyecto1{
+  width: 400px;
+  height: 300px;
+  transition: transform 0.5s ease; 
+
 }
 
 .img-proyecto2{
-  width: 600px;
-  height: 400px;
-  margin-left: 50%;
+  width: 400px;
+  height: 300px;
+  transition: transform 0.5s ease; 
+  margin-top: 30px; 
+}
+
+.img-proyecto1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+  animation: baile 2.5s ease-in-out ;
+}
+
+.img-proyecto2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: baile 2.5s ease-in-out ;
+}
+
+@keyframes baile {
+  0%, 100% { transform: rotateY(100deg); }
+  50% { transform: rotateX(100deg); }
 }
