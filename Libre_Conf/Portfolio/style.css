@@ -2,6 +2,7 @@ body {
   font-family: monospace;
 } 
 
+/*circulo de foto de perfil*/
 .perfil-imagen {
   width: 150px;
   height: 150px;
@@ -14,15 +15,43 @@ body {
   display: block;
   width: 200px;
   margin: 10px auto;
+  background-color: #009D71;
+  border-color: #000000;
 }
 
-.habilidades, .informacion-personal {
-  margin-bottom: 30px;
+.boton-contacto:hover {
+  background-color: #007957;
+  border-color: #000000;
 }
 
-.proyecto {
-  background-color: #eaeaea;
-  height: 200px;
+.boton-enviar {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  background-color: #009D71;
+  border-color: #000000;
+}
+
+.boton-enviar:hover {
+  background-color: #007957;
+  border-color: #000000;
+}
+
+.nav-link {
+  color: #000000; 
+}
+
+.nav-link:hover {
+  color: #007957; 
+}
+
+.margen header {
+  border-bottom: 1px solid #000000; 
+}
+
+#sobre-mi-link{
+  color: #000000;
+  background-color: #009D71;
 }
 
 .seccion-contacto {
@@ -55,6 +84,10 @@ body.dark-mode {
   color: #ffffff; 
 }
 
+.dark-mode #sobre-mi-link{
+  color: #ffffff;
+}
+
 .dark-mode .card {
   background-color: #333; 
   color: #ffffff;
@@ -63,6 +96,14 @@ body.dark-mode {
 
 body.dark-mode .seccion-contacto {
   background-color: #1a1a1a; 
+}
+
+.dark-mode .nav-link {
+  color: #ffffff;
+}
+
+.dark-mode .nav-link:hover{
+  color: #009D71;
 }
 
 #toggleTheme {
@@ -131,7 +172,7 @@ body {
   text-align: center;
   height: 20px;
   width: 0%;
-  background: #007bff;
+  background-color: #009D71;
   border-radius: 20px;
   transition: width 2s ease-in-out;
 }
@@ -175,4 +216,27 @@ body {
 #skills-header {
   margin-left: 200px;
   margin-bottom: 4%; 
+}
+
+#proyectos-header {
+  margin-left: 200px;
+  margin-bottom: 4%; 
+}
+
+.img-proyecto{
+  width: 600px;
+  height: 400px;
+  margin-left: 10%;
+}
+
+.container-proyectos {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 150px;
+}
+
+.img-proyecto2{
+  width: 600px;
+  height: 400px;
+  margin-left: 50%;
 }
