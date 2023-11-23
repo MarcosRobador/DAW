@@ -15,5 +15,4 @@ if ($conexion->connect_error) {
 }
 
 
-$conexion->close();
 ?>
