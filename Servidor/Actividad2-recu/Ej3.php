@@ -56,3 +56,4 @@ $empleado2 = new Empleado("Pedro", "Mateos", 3500);
 echo "Empleado 1 - Nombre completo: " . $empleado1->getNombreCompleto() . ", Sueldo: " . $empleado1->getSueldo() . "\n";
 echo "Empleado 2 - Nombre completo: " . $empleado2->getNombreCompleto() . ", Sueldo: " . $empleado2->getSueldo() . "\n";
 ?>
+
