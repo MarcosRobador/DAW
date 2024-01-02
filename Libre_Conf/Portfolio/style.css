@@ -2,14 +2,7 @@ body {
   font-family: monospace;
 } 
 
-/*circulo de foto de perfil*/
-.perfil-imagen {
-  width: 150px;
-  height: 150px;
-  background-color: #eaeaea;
-  border-radius: 50%;
-  margin: 0 auto;
-}
+
 
 .boton-contacto {
   display: block;
