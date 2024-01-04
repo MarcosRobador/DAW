@@ -61,15 +61,16 @@ class Empleado {
         $this->telefonos = [];
     }
 
-    public function mostrarInformacionHtml(): string {
+    public static function toHtml(Empleado $emp): string {
         $html = "<p>";
-        $html .= "Nombre: " . $this->getNombreCompleto() . "<br>";
-        $html .= "Sueldo: " . $this->getSueldo() . "€<br>";
-        $html .= "Paga impuestos: " . ($this->debePagarImpuestos() ? "Sí" : "No") . "<br>";
+        $html .= "Nombre: " . $emp->getNombreCompleto() . "<br>";
+        $html .= "Sueldo: " . $emp->getSueldo() . "€<br>";
+        $html .= "Paga impuestos: " . ($emp->debePagarImpuestos() ? "Sí" : "No") . "<br>";
 
-        if (!empty($this->telefonos)) {
+        $telefonos = $emp->getTelefonos();
+        if (!empty($telefonos)) {
             $html .= "Teléfonos:<ol>";
-            foreach ($this->telefonos as $telefono) {
+            foreach ($telefonos as $telefono) {
                 $html .= "<li>" . $telefono . "</li>";
             }
             $html .= "</ol>";
@@ -84,5 +85,7 @@ class Empleado {
 $empleado = new Empleado("Marcos", "Robador", 3500);
 $empleado->anyadirTelefono(123456789);
 $empleado->anyadirTelefono(987654321);
-echo $empleado->mostrarInformacionHtml();
+
+// Generar y mostrar la información del empleado en formato HTML
+echo Empleado::toHtml($empleado);
 ?>
