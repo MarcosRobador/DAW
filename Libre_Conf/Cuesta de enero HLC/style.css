@@ -19,9 +19,12 @@ header h1 {
     margin: 0;
 }
 
+/* Estilo para la barra de navegación */
 nav ul {
-    list-style: none;
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0;
     padding: 0;
+    overflow: hidden; /* Asegura que los elementos de la lista estén alineados */
 }
 
 nav ul li {
@@ -80,7 +83,7 @@ footer p {
 }
 
 section {
-    margin: 20px;
+    margin: 100px;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
@@ -112,4 +115,42 @@ section p code {
     padding: 2px 4px;
     font-family: monospace;
 }
+
+#docker-section img {
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto;
+}
+
+#git-section img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto; 
+}
+
+button {
+    color: white;
+    padding: 10px 20px; 
+    margin: 4px 2px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#btn-git {
+    background-color: rgb(255, 81, 0);
+}
+
+#btn-docker {
+background-color: #0da9fd;}
+
 
