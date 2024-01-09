@@ -19,12 +19,11 @@ header h1 {
     margin: 0;
 }
 
-/* Estilo para la barra de navegación */
 nav ul {
-    list-style-type: none; /* Elimina los puntos de la lista */
+    list-style-type: none; 
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Asegura que los elementos de la lista estén alineados */
+    overflow: hidden; 
 }
 
 nav ul li {

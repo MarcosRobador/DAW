@@ -13,4 +13,3 @@ document.getElementById('btn-git').addEventListener('click', function() {
 document.getElementById('btn-docker').addEventListener('click', function() {
     document.body.style.backgroundColor = '#0da9fd';
 });
-
