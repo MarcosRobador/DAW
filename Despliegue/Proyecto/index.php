@@ -10,33 +10,32 @@
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Botini</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#precio">Precios </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#caracteristicas">Características</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contacto">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Botini</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#precio">Precios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#caracteristicas">Características</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <div class="imagen-fondo" id="#inicio">
-      <img src="img/fondo.png" alt="fondo">
-    </div>
-    
-    
+  <div class="imagen-fondo" id="#inicio">
+    <img src="img/fondo.png" alt="fondo">
+  </div>
+        
   <div class="image-gallery" id="precio">
     <div class="image">
       <h3>Dunk</h3>
@@ -55,54 +54,61 @@
     </div>
   </div>
 
-  
-    <div class="image-gallery">
-      <div class="image">
-        <h3>Converse</h3>
-          <img src="img/converse.jpeg" alt="Converse">
-        <h4>Precio: 90€</h4>
-      </div>
-      <div class="image">
-        <h3>Vans</h3>
-          <img src="img/vans.jpeg" alt="Vans">
-        <h4>Precio: 65€</h4>
-      </div>
-      <div class="image">
-        <h3>Jordan 1</h3>
-          <img src="img/jordan1.jpeg" alt="Jordan1">
-        <h4>Precio: 130€</h4>
-      </div>
+  <div class="image-gallery">
+    <div class="image">
+      <h3>Converse</h3>
+        <img src="img/converse.jpeg" alt="Converse">
+      <h4>Precio: 90€</h4>
     </div>
-
-    <div class="image-gallery">
-      <div class="image">
-        <h3>Gazelle</h3>
-          <img src="img/gazelle.jpeg" alt="Gazelle">
-        <h4>Precio: 70€</h4>
-      </div>
-      <div class="image">
-        <h3>Jordan Retro 4</h3>
-          <img src="img/jordanRetro4.jpg" alt="JordanRetro4">
-        <h4>Precio: 120€</h4>
-      </div>
-      <div class="image">
-        <h3>Air Max</h3>
-          <img src="img/airMax.jpeg" alt="AirMax">
-        <h4>Precio: 100€</h4>
-      </div>
+    <div class="image">
+      <h3>Vans</h3>
+        <img src="img/vans.jpeg" alt="Vans">
+      <h4>Precio: 65€</h4>
     </div>
+    <div class="image">
+      <h3>Jordan 1</h3>
+        <img src="img/jordan1.jpeg" alt="Jordan1">
+      <h4>Precio: 130€</h4>
+    </div>
+  </div>
 
-    <form method="post">
-      <input type="number" name="num1" placeholder="Número 1" required>
-      <input type="number" name="num2" placeholder="Número 2" required>
-      <select name="operacion">
-          <option value="suma">Suma</option>
-          <option value="resta">Resta</option>
-          <option value="multiplicacion">Multiplicación</option>
-          <option value="division">División</option>
-      </select>
-      <input type="submit" value="Calcular">
+  <!--Pongo el id de la calculadora ahi, de manera que
+  cuando le de al boton calcular, se quede en una altura
+  adecuada, porque si no, se recarga la pagina, llevandome
+  a la parte de arriba-->
+  <div class="image-gallery" id="calculadora">
+    <div class="image">
+      <h3>Gazelle</h3>
+        <img src="img/gazelle.jpeg" alt="Gazelle">
+      <h4>Precio: 70€</h4>
+    </div>
+    <div class="image">
+      <h3>Jordan Retro 4</h3>
+        <img src="img/jordanRetro4.jpg" alt="JordanRetro4">
+      <h4>Precio: 120€</h4>
+    </div>
+    <div class="image">
+      <h3>Air Max</h3>
+        <img src="img/airMax.jpeg" alt="AirMax">
+      <h4>Precio: 100€</h4>
+    </div>
+  </div>
+
+  <div class="contenedor-calculadora">
+  <h1>¿Quieres calcular el presupuesto?</h1>
+
+  <form class="calculadora" method="post" action="#calculadora">
+    <input type="number" name="num1" placeholder="Número 1" required>
+    <input type="number" name="num2" placeholder="Número 2" required>
+    <select name="operacion">
+        <option value="suma">Suma</option>
+        <option value="resta">Resta</option>
+        <option value="multiplicacion">Multiplicación</option>
+        <option value="division">División</option>
+    </select>
+    <input type="submit" value="Calcular">
   </form>
+  </div>
 
   <?php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -130,13 +136,9 @@
       }
 
       $resultado = calcular($num1, $num2, $operacion);
-      echo "<p>Resultado: " . $resultado . "</p>";
+      echo "<div class='resultado'>Resultado: " . $resultado . "</div>";
   }
   ?>
-
-
-
-
 
   <div class="caracteristicas" id="caracteristicas"> 
     <h1>Características</h1>
@@ -201,7 +203,8 @@
 
 </body>
 <script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3UDkPWsVZ4nT4G8/61EZTx" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </html>
