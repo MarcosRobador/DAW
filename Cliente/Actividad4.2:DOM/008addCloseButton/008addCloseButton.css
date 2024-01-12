@@ -1,0 +1,21 @@
+body {
+    margin: 10px auto;
+    width: 470px;
+}
+  
+.cuadro {
+    background: #defcaf;
+    padding: 10px 20px 10px;
+    border-top: solid 2px #b5fc49;
+    position: relative;
+}
+  
+.borrar {
+    position: absolute;
+    color: rgb(212, 0, 0);
+    right: 10px;
+    height: 24px;
+    border: none;
+    background: transparent;
+}
+  
