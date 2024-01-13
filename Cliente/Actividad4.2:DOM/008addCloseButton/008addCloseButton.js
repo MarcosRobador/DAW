@@ -1,6 +1,8 @@
 "use strict"
 
-/**/
+/*Agrega un boton de cierre '[x]' a cada elemento con la 
+clase 'cuadro'. Al hacer clic en este boton, se elimina el 
+elemento 'cuadro'*/
 
 let cuadros = document.querySelectorAll('.cuadro');
     
