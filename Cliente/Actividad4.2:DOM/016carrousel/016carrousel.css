@@ -1,0 +1,40 @@
+#carrusel {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagen-carrusel {
+    width: 100%;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#botonAnterior, #botonSiguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#botonAnterior {
+    left: 10px;
+}
+
+#botonSiguiente {
+    right: 10px;
+}
