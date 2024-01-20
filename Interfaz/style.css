@@ -2,3 +2,42 @@
     margin-right: 25px; 
 }
 
+#historia-empresa {
+    background-color: #f8f9fa;
+    padding: 40px;
+}
+
+#historia-empresa h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#historia-empresa .lead {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#historia-empresa p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.contenedor .imagen-interactiva {
+    display: flex;
+}
+
+.contenedor .imagen-interactiva img {
+    display: block;
+    width: 300px; 
+    height: 200px; 
+    transition: opacity 0.3s ease;
+    margin: 0 auto; 
+}
+
+.contenedor .imagen-interactiva img:hover {
+    opacity: 0.7;
+}
+
+

@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Logo" style="height:40px;"> Empresa
+                <img src="img/logo.png" alt="Logo" style="height:40px;">ECOTECH
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,8 +34,33 @@
             </div>
         </nav>
     </header>
+
+    <section id="historia-empresa">
+        <div class="container">
+            <h2>Nuestra Historia</h2>
+            <p class="lead">Pioneros en la revolución digital desde 2005.</p>
+            <p>Comenzando en un pequeño garaje, <strong>Empresa Tecnológica ECOTECH</strong> ha sido sinónimo de innovación y progreso tecnológico. Transformamos grandes ideas en soluciones que lideran el mercado global, especializándonos en software avanzado y hardware revolucionario.</p>
+            <p>La colaboración con instituciones académicas y nuestro enfoque en I+D nos posicionan en la cima de la tecnología, con múltiples patentes a nuestro nombre.</p>
+            <p>En <strong>Empresa Tecnológica ECOTECH</strong>, nos comprometemos a seguir adelante, enriqueciendo vidas y moldeando el futuro tecnológico con cada innovación.</p>
+        </div>
+        <div class="contenedor">
+            <div class="imagen-interactiva">
+                <img id="imagenOficina" src="img/oficina-dia.png" alt="Oficina ECOTECH" 
+                     onmouseover="cambiarImagen('noche', 'imagenOficina');" 
+                     onmouseout="cambiarImagen('dia', 'imagenOficina');">
+                <img id="imagenFabrica" src="img/fabrica-dia.png" alt="Fábrica ECOTECH" 
+                     onmouseover="cambiarImagen2('noche', 'imagenFabrica');" 
+                     onmouseout="cambiarImagen2('dia', 'imagenFabrica');">                
+                <img id="imagenAlmacen" src="img/almacen-dia.png" alt="Almacen ECOTECH" 
+                     onmouseover="cambiarImagen3('noche', 'imagenAlmacen');" 
+                     onmouseout="cambiarImagen3('dia', 'imagenAlmacen');">
+            </div>
+        </div>        
+    </section>
     
+
 </body>
+<script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
