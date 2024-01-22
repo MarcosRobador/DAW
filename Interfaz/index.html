@@ -106,6 +106,32 @@
     
     </div>
     
+    <button id="toggleForm">Mostrar/Ocultar Formulario</button>
+    <form id="contactForm">
+        <label for="nombre">Nombre*</label>
+        <input type="text" id="nombre" required>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos">
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" required>
+
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto">
+
+        <label for="comentario">Comentario*</label>
+        <textarea id="comentario" required></textarea>
+
+        <input type="checkbox" id="politicaPrivacidad">
+        <label for="politicaPrivacidad">Acepto la política de privacidad*</label>
+
+        <label for="captcha">Captcha: ¿Cuánto es <span id="num1"></span> + <span id="num2"></span>?</label>
+        <input type="text" id="captcha" oninput="validarCaptcha()">
+        <span id="resultadoCaptcha"></span>
+
+        <button type="submit" id="enviar">Enviar</button>
+    </form>
     
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
