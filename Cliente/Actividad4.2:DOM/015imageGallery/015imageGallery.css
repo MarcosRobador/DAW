@@ -1,0 +1,14 @@
+#imagenPrincipal {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+}
+#miniaturas {
+    margin-top: 10px;
+}
+.miniatura {
+    width: 100px; 
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}

@@ -1,0 +1,8 @@
+.selec {
+    background: rgb(171, 255, 171);
+    width: 50%;
+  }
+
+  li {
+    cursor: pointer;
+  }

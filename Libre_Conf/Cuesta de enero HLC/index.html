@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+   
+    <header>
+        <h1>Página Informativa Interactiva sobre Git y Docker</h1>
+        <nav>
+            <ul>
+                <li><button id="btn-git">Git</button></li>
+                <li><button id="btn-docker">Docker</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="bienvenida">
+        <h2>Bienvenido a Mi Sitio Web</h2>
+        <p>Esta es una página dedicada a compartir información sobre Git y Docker.</p>
+        <p>Aquí encontrarás tutoriales, consejos, y las últimas noticias sobre estas herramientas.</p>
+    </section>
+    
+
+    <section id="git-section" class="hidden">
+        <img src="img/git.png" alt="git">
+
+        <h2>¿Qué es Git?</h2>
+        <p>Git es un sistema de control de versiones distribuido, diseñado para manejar desde proyectos pequeños hasta muy grandes con velocidad y eficiencia. Fue creado por Linus Torvalds en 2005 para el desarrollo del kernel de Linux.</p>
+        <h2>¿Para qué se utiliza?</h2>
+        <p>Git <e utiliza para rastrear cambios en el código fuente durante el desarrollo de software. Permite a múltiples desarrolladores trabajar juntos en un proyecto coordinando sus cambios.</p>
+        <h2>Ventajas de Git:</h2>
+        <p>Distribuido: Cada desarrollador tiene una copia local del historial de desarrollo, lo que permite trabajar de manera descentralizada.
+            Rendimiento: Git es rápido y eficiente en términos de rendimiento.
+            Seguridad: Utiliza criptografía SHA-1 para asegurar la integridad del código fuente.
+            Flexibilidad: Soporta varios flujos de trabajo no lineales y es eficiente en proyectos grandes y pequeños.</p>
+        <h2>Comandos Básicos de Git:</h2>
+        <p>git init: Inicializa un nuevo repositorio de Git.
+            git clone [url]: Clona un repositorio existente.
+            git add [archivo]: Agrega archivos al área de preparación para el próximo commit.
+            git commit -m "[mensaje descriptivo]": Realiza un commit de los archivos que se han añadido.
+            git push: Sube los cambios al repositorio remoto.
+            git pull: Actualiza el repositorio local con los últimos cambios del remoto.
+            git branch: Lista, crea o elimina ramas.
+            git checkout [nombre_de_rama]: Cambia a otra rama.
+            </p>
+
+    </section>
+
+    <section id="docker-section" class="hidden">
+        <img src="img/docker.png" alt="git">
+
+        <h2>¿Qué es Docker?</h2>
+        <p>Docker es una plataforma de contenedores que permite empaquetar aplicaciones y sus dependencias en un contenedor virtualizado que puede ejecutarse en cualquier sistema Linux. Esto facilita la implementación y escalabilidad de aplicaciones, además de asegurar la consistencia en múltiples entornos de desarrollo, pruebas y producción.</p>
+        <h2>¿Para qué se utiliza?</h2>
+        <p>Docker se utiliza para crear, desplegar y ejecutar aplicaciones usando contenedores. Los contenedores permiten a los desarrolladores empaquetar una aplicación con todas las partes que necesita, como bibliotecas y otros dependencias, y enviarlo como un solo paquete.</p>
+        <h2>Ventajas de Docker:</h2>
+        <p>Consistencia y Aislamiento: Cada contenedor opera de manera aislada, lo que asegura la consistencia en todos los entornos.
+            Portabilidad: Los contenedores pueden ejecutarse en cualquier sistema que tenga Docker instalado, lo que facilita la migración de aplicaciones.
+            Eficiencia: Los contenedores comparten el mismo núcleo del sistema operativo, pero se ejecutan como procesos aislados, lo que los hace más ligeros que las máquinas virtuales tradicionales.
+            Despliegue Rápido: Los contenedores pueden crearse, iniciarse y detenerse en segundos.</p>
+        <h2>Comandos Básicos de Docker:</h2>
+        <p>docker run [imagen]: Crea y ejecuta un contenedor a partir de una imagen.
+            docker build -t [nombre]:[tag] .: Construye una imagen a partir de un Dockerfile.
+            docker images: Lista las imágenes disponibles.
+            docker ps: Muestra los contenedores en ejecución.
+            docker stop [contenedor]: Detiene un contenedor en ejecución.
+            docker rm [contenedor]: Elimina un contenedor.
+            docker rmi [imagen]: Elimina una imagen.</p>
+
+    </section>
+
+    <footer>
+        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Twitter</a> y <a href="#">Instagram</a>.</p>
+    </footer>
+    
+   
+   
+    <script src="script.js"></script>
+
+</body>
+</html>
