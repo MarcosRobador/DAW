@@ -28,3 +28,13 @@ function cambiarImagen3(modo, imagenAlmacen) {
 }
 
 
+$(document).ready(function() {
+    $("#acordeon h3").each(function() {
+        $(this).click(function() {
+            $("#acordeon .contenido").not($(this).next()).slideUp();
+
+            $(this).next().slideToggle();
+        });
+    });
+});
+
