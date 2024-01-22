@@ -1,5 +1,6 @@
 "use strict"
 
+// Cambio de imagen cuando pasas el rato npor encima
 function cambiarImagen(modo, imagenOficina) {
     let imagen = document.getElementById(imagenOficina);
     if(modo === 'noche') {
@@ -27,7 +28,7 @@ function cambiarImagen3(modo, imagenAlmacen) {
     }
 }
 
-
+// Acordeon
 $(document).ready(function() {
     $("#acordeon h3").each(function() {
         $(this).click(function() {
@@ -90,4 +91,52 @@ $(document).ready(function() {
     $('#toggleForm').click(function() {
         $('#contactForm').slideToggle();
     });
+});
+
+//Cambia de color cuando clikas en los enlaces del footer
+$('footer a').click(function() {
+    $(this).css('color', '#ff0000');
+});
+
+//Oculta los h4
+$('.footer-column h4').click(function() {
+    $(this).next().toggle();
+});
+
+//Animacion en footer
+$('.footer-column h4').hover(function() {
+    $(this).animate({ fontSize: '1.2em' }, 300);
+}, function() {
+    $(this).animate({ fontSize: '1em' }, 300);
+});
+
+// Uso de fadeIn()
+$('#fadein-btn').click(function () {
+    $('#fadein-element').fadeIn();
+});
+
+ // Evento Scroll
+ $(window).scroll(function () {
+    let scrollPos = $(window).scrollTop();
+    $('#scroll-indicator').text('Scroll Pos: ' + scrollPos);
+});
+
+//Scroll
+$(window).scroll(function () {
+    let scrollPos = $(window).scrollTop();
+    let windowHeight = $(window).height();
+    let docHeight = $(document).height();
+
+    let totalScroll = (scrollPos / (docHeight - windowHeight)) * 100;
+
+    $('#scroll-indicator').text('Scroll Pos: ' + totalScroll.toFixed(0) + '%');
+
+    // Cambiar el color y la opacidad basado en la posición de desplazamiento
+    $('#scroll-indicator').css('background-color', `rgba(76, 175, 80, ${totalScroll / 100})`);
+});
+
+ // attr
+ $('#fadein-btn').click(function(e) {
+    e.preventDefault();
+    $('#cambio').attr('href', 'https://www.apple.com/es/');
 });
