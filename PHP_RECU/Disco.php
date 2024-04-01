@@ -4,9 +4,9 @@ class Disco extends Soporte {
     public $idiomas;
     private $formatoPantalla;
 
-    public function __construct($titulo, $numero, $idiomas, $formatoPantalla) {
-        $this->titulo = $titulo;
-        $this->numero = $numero;
+
+    public function __construct($titulo, $numero, $precio, $idiomas, $formatoPantalla) {
+        parent::__construct($titulo, $numero, $precio);
         $this->idiomas = $idiomas;
         $this->formatoPantalla = $formatoPantalla;
     }
@@ -18,5 +18,3 @@ class Disco extends Soporte {
         echo "Formato de pantalla: " . $this->formatoPantalla . "<br>";
     }
 }
-
-?>

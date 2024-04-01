@@ -11,7 +11,7 @@ $soporte->muestraResumen();
 echo "Precio con IVA: " . $soporte->getPrecioConIva();
 
 echo "<br><br>Disco.php<br><br>";
-$disco = new Disco("Película en disco", 456, "Español, Inglés", "16:9");
+$disco = new Disco("Película en disco", 456, 20.99, "Español, Inglés", "16:9");
 $disco->muestraResumen();
 
 echo "<br><br>Juego.php<br><br>";
