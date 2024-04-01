@@ -31,8 +31,3 @@ class Soporte {
     }
 }
 
-// Test
-$soporte = new Soporte("Película", 123, 10);
-$soporte->muestraResumen();
-echo "Precio con IVA: " . $soporte->getPrecioConIva();
-?>
