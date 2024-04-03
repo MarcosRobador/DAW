@@ -1,16 +1,13 @@
 <?php
 
 class Soporte {
-    public $titulo;
-    protected $numero;
-    private $precio;
-    private static $IVA = 21;
+    private static int $IVA = 21;
 
-    public function __construct($titulo, $numero, $precio) {
-        $this->titulo = $titulo;
-        $this->numero = $numero;
-        $this->precio = $precio;
-    }
+    public function __construct(
+        public string $titulo,
+        protected int $numero,
+        private float $precio
+    ) {}
 
     public function getPrecio() {
         return $this->precio;

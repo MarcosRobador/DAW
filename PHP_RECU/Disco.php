@@ -1,15 +1,17 @@
 <?php
 
-class Disco extends Soporte {
-    public $idiomas;
-    private $formatoPantalla;
-
-
-    public function __construct($titulo, $numero, $precio, $idiomas, $formatoPantalla) {
-        parent::__construct($titulo, $numero, $precio);
-        $this->idiomas = $idiomas;
-        $this->formatoPantalla = $formatoPantalla;
-    }
+class Disco extends Soporte {    
+    
+    public function __construct(
+    $titulo,
+    $numero,
+    $precio,
+    public string $idiomas,
+    private string $formatoPantalla
+    
+) {
+    parent::__construct($titulo, $numero, $precio);
+}
 
     public function muestraResumen() {
         echo "Título: " . $this->titulo . "<br>";
