@@ -1,11 +1,10 @@
 <?php
 
 class Juego extends Soporte {
-    
     public function __construct(
-        $titulo,
-        $numero,
-        $precio,
+        string $titulo,
+        int $numero,
+        float $precio,
         public string $consola,
         private int $minNumJugadores,
         private int $maxNumJugadores
@@ -13,22 +12,18 @@ class Juego extends Soporte {
         parent::__construct($titulo, $numero, $precio);
     }
 
-
-    public function muestraJugadoresPosibles() {
-        if ($this->minNumJugadores == 1 && $this->maxNumJugadores == 1) {
-            echo "Para un jugador";
-        } elseif ($this->minNumJugadores == $this->maxNumJugadores) {
-            echo "Para " . $this->minNumJugadores . " jugadores";
+    public function muestraJugadoresPosibles(): string {
+        if ($this->minNumJugadores === $this->maxNumJugadores) {
+            return $this->minNumJugadores === 1 ? "Para un jugador" : "Para " . $this->minNumJugadores . " jugadores";
         } else {
-            echo "De " . $this->minNumJugadores . " a " . $this->maxNumJugadores . " jugadores";
+            return "De " . $this->minNumJugadores . " a " . $this->maxNumJugadores . " jugadores";
         }
     }
 
-    public function muestraResumen() {
-        parent::muestraResumen();
-        echo "Consola: " . $this->consola . "<br>";
-        echo "Jugadores posibles: ";
-        $this->muestraJugadoresPosibles();
-        echo "<br>";
+    public function muestraResumen(): string {
+        $resumen = parent::muestraResumen();
+        $resumen .= "Consola: " . $this->consola . "\n" .
+                    $this->muestraJugadoresPosibles() . "\n";
+        return $resumen;
     }
 }

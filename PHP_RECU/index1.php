@@ -1,13 +1,15 @@
 <?php
 require_once 'Soporte.php';
+
+$soporte = new Soporte("Soporte1", 1, 19.99);
+echo $soporte->muestraResumen();
+
 require_once 'Disco.php';
 
-// Test
-echo "Soporte.php <br><br>";
-$soporte = new Soporte("Película", 123, 10);
-$soporte->muestraResumen();
-echo "Precio con IVA: " . $soporte->getPrecioConIva();
+$disco = new Disco("Casablanca", 2, 14.99, ["Español", "Inglés", "Francés"], "16:9");
+echo $disco->muestraResumen();
 
-echo "<br><br>Disco.php<br><br>";
-$disco = new Disco("Película en disco", 456, 20.99, "Español, Inglés", "16:9");
-$disco->muestraResumen();
+require_once 'Juego.php';
+
+$juego = new Juego("Super Mario Odyssey", 3, 59.99, "Nintendo Switch", 1, 2);
+echo $juego->muestraResumen();

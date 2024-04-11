@@ -1,22 +1,20 @@
 <?php
 
-class Disco extends Soporte {    
-    
+class Disco extends Soporte {
     public function __construct(
-    $titulo,
-    $numero,
-    $precio,
-    public string $idiomas,
-    private string $formatoPantalla
-    
-) {
-    parent::__construct($titulo, $numero, $precio);
-}
+        string $titulo,
+        int $numero,
+        float $precio,
+        public array $idiomas,
+        private string $formatoPantalla
+    ) {
+        parent::__construct($titulo, $numero, $precio);
+    }
 
-    public function muestraResumen() {
-        echo "Título: " . $this->titulo . "<br>";
-        echo "Número: " . $this->numero . "<br>";
-        echo "Idiomas: " . $this->idiomas . "<br>";
-        echo "Formato de pantalla: " . $this->formatoPantalla . "<br>";
+    public function muestraResumen(): string {
+        $resumen = parent::muestraResumen();
+        $resumen .= "Idiomas: " . implode(', ', $this->idiomas) . "<br>" .
+                    "Formato de pantalla: " . $this->formatoPantalla . "<br>";
+        return $resumen;
     }
 }

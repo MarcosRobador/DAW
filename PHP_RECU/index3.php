@@ -1,33 +1,44 @@
 <?php
-
-require_once 'Cliente.php'; 
 require_once 'Soporte.php';
+require_once 'Cliente.php';
 
-$soporte1 = new Soporte("Película 1", 1, 10.99);
-$soporte2 = new Soporte("Libro 1", 2, 19.99);
-$soporte3 = new Soporte("CD 1", 3, 9.99);
+//Cliente
+$cliente = new Cliente("Marcos", 1);
 
-//Objeto Cliente
-$cliente = new Cliente("Juan", 123);
+// Creamos algunos soportes
+$soporte1 = new Soporte("Soporte 1", 101, 19.99);
+$soporte2 = new Soporte("Soporte 2", 102, 29.99);
 
-// Alquiler de algunos soportes
-$cliente->alquilar($soporte1);
-$cliente->alquilar($soporte2);
-$cliente->alquilar($soporte3);
+// Intentamos alquilar un soporte
+echo "Intentando alquilar Soporte 1...\n";
+$resultado = $cliente->alquilar($soporte1);
+echo "Resultado: " . ($resultado ? "Éxito" : "Fallo") . "\n\n";
 
-// Muestra resumen de alquileres
-echo "Resumen de alquileres antes de devolución:<br>";
+// Intentamos alquilar el mismo soporte de nuevo
+echo "Intentando alquilar Soporte 1 de nuevo...\n";
+$resultado = $cliente->alquilar($soporte1);
+echo "Resultado: " . ($resultado ? "Éxito" : "Fallo") . "\n\n";
+
+// Alquilamos un segundo soporte
+echo "Intentando alquilar Soporte 2...\n";
+$resultado = $cliente->alquilar($soporte2);
+echo "Resultado: " . ($resultado ? "Éxito" : "Fallo") . "\n\n";
+
+// Listamos los alquileres actuales del cliente
+echo "Listado de alquileres:\n";
 $cliente->listarAlquileres();
-echo "<br>";
+echo "\n";
 
-// Devuelve un soporte
-echo "Devolviendo el segundo soporte:<br>";
-$cliente->devolver(1);
-echo "<br>";
+// Devolvemos un soporte
+echo "Devolviendo Soporte 1...\n";
+$resultado = $cliente->devolver($soporte1->getNumero());
+echo "Resultado: " . ($resultado ? "Éxito" : "Fallo") . "\n\n";
 
-// Muestra resumen de alquileres actualizado
-echo "Resumen de alquileres después de devolución:<br>";
+// Listamos los alquileres de nuevo
+echo "Listado de alquileres después de la devolución:\n";
 $cliente->listarAlquileres();
-echo "<br>";
+echo "\n";
 
-?>
+// Muestra el resumen del cliente
+echo "Mostrando el resumen del cliente:\n";
+$cliente->muestraResumen();
