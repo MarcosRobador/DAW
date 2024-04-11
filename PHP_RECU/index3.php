@@ -1,38 +1,26 @@
 <?php
-require_once 'Cliente.php'; 
-require_once 'Soporte.php'; 
+require_once 'Soporte.php';
+require_once 'Cliente.php';
 
-// Crear instancias de Cliente
-$cliente1 = new Cliente("Marcos", 1);
-$cliente2 = new Cliente("Lola", 2);
+$cliente = new Cliente("Juan", 123);
 
-// Crear instancias de Soporte
-$soporte1 = new Soporte("Soporte1", 1, 10.0);
-$soporte2 = new Soporte("Soporte2", 2, 15.0);
-$soporte3 = new Soporte("Soporte3", 3, 20.0);
+// Agregar soportes alquilados por el cliente
+$soporte1 = new Soporte("Soporte 1", 1, 2);
+$soporte2 = new Soporte("Soporte 2", 2, 3);
+$soporte3 = new Soporte("Soporte 3", 3, 4);
 
-// Alquilar soportes
-$cliente1->alquilar($soporte1);
-$cliente1->alquilar($soporte2);
-$cliente2->alquilar($soporte3);
+$cliente->alquilar($soporte1);
+$cliente->alquilar($soporte2);
+$cliente->alquilar($soporte3);
 
-// Listar alquileres antes de devolver
-echo "Alquileres antes de devolver:\n";
-$cliente1->listarAlquileres();
+// Mostrar un resumen de los alquileres del cliente
+$cliente->muestraResumen();
 
-// Intentar devolver un soporte que está alquilado
-echo "\nIntentando devolver el soporte 2:\n";
-$resultado = $cliente1->devolver(2);
+// Listar los alquileres del cliente
+$cliente->listarAlquileres();
 
-// Verificar si la devolución fue exitosa
-if ($resultado) {
-    echo "\nLa devolución fue exitosa.\n";
-} else {
-    echo "\nLa devolución no fue exitosa.\n";
-}
+// Devolver un soporte alquilado
+$cliente->devolver(2);
 
-// Listar alquileres después de devolver
-echo "\nAlquileres después de devolver:\n";
-$cliente1->listarAlquileres();
-
-
+// Listar los alquileres actualizados después de devolver un soporte
+$cliente->listarAlquileres();
