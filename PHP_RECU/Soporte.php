@@ -1,13 +1,7 @@
 <?php
-abstract class Soporte {
+require_once 'Resumible.php';
+abstract class Soporte implements Resumible {
     protected static int $IVA = 21;
-
-    // Al hacer la clase abstracta, indicamos que está destinada únicamente a ser una clase base.
-    // Esto significa que no se pretende que Soporte sea instanciada por sí misma,
-    // sino que sirva como plantilla para clases derivadas que representarán 
-    // soportes específicos (como CintaVideo, Disco, Juego, etc.).
-    // Estas clases derivadas heredarán las propiedades y métodos de Soporte
-    // y podrán implementar o sobrescribir sus propios métodos según sea necesario.
 
     public function __construct(
         public string $titulo,

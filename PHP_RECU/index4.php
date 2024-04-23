@@ -1,6 +1,5 @@
 <?php
 
-// Asegúrate de incluir todas las clases necesarias.
 require_once 'Soporte.php';
 require_once 'CintaVideo.php';
 require_once 'Disco.php';
@@ -11,27 +10,40 @@ require_once 'Videoclub.php';
 // Crear un nuevo videoclub
 $videoclub = new Videoclub("Blockbuster");
 
-// Incluir algunos productos (CintaVideo, Disco, Juego)
-$videoclub->incluirCintaVideo("Back to the Future", 1.99, 116);
-$videoclub->incluirDvd("The Godfather", 2.99, ["English", "Italian"], "16:9");
+// Incluir algunos productos
+$videoclub->incluirCintaVideo("LOL", 1.99, 116);
+$videoclub->incluirDvd("Cars", 2.99, ["English", "Italian"], "16:9");
 $videoclub->incluirJuego("Super Mario Bros.", 29.99, "Nintendo", 1, 4);
 
 // Incluir algunos socios
-$videoclub->incluirSocio("John Doe");
-$videoclub->incluirSocio("Jane Smith");
+$videoclub->incluirSocio("Pedro"); // Supongamos que Pedro puede tener hasta 2 alquileres concurrentes.
+$videoclub->incluirSocio("Jorge");
 
-// Listar productos y socios
-echo "Listado de productos del videoclub:<br>";
+// Listar productos y socios antes de los alquileres
+echo "Listado de productos del videoclub antes de alquileres:<br>";
 $videoclub->listarProductos();
-echo "<br>Listado de socios del videoclub:<br>";
+echo "<br><br>Listado de socios del videoclub antes de alquileres:<br>";
 $videoclub->listarSocios();
 
 // Alquilar un producto a un socio
-$videoclub->alquilarSocioProducto(1, 1); // Suponiendo que estos números correspondan a un socio y producto existente
+echo "<br><br>Intentando alquilar 'Cars' a Pedro:<br>";
+$videoclub->alquilarSocioProducto(1, 2); // Asumiendo que Pedro es el socio 1 y 'Cars' es el producto 2
 
-// Mostrar el resumen de un socio después del alquiler
+// Alquilar otro producto
+echo "<br>Intentando alquilar 'Super Mario Bros.' a Pedro:<br>";
+$videoclub->alquilarSocioProducto(1, 3); // Asumiendo que 'Super Mario Bros.' es el producto 3
+
+// Intentar alquilar más allá del límite
+echo "<br>Intentando alquilar 'LOL' a Pedro:<br>";
+$videoclub->alquilarSocioProducto(1, 1); // Asumiendo que 'LOL' es el producto 1
+
+// Devolver un producto
+echo "Devolviendo 'Cars' por Pedro:";
 $socio = $videoclub->buscarSocioPorNumero(1);
 if ($socio) {
-    echo "<br>Resumen de alquileres del socio:<br>";
-    $socio->listarAlquileres();
+    $soporte = $videoclub->buscarProductoPorNumero(2); // Buscando 'Cars'
+    if ($soporte) {
+        $socio->devolver($soporte);
+    }
 }
+
